@@ -1,0 +1,218 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  height: 50px;
+  margin-top: auto;
+}
+
+nav h1 {
+  margin-left:10px;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+nav button {
+  border: none;
+  border-radius: 5px;
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  margin-bottom: 2px;
+}
+
+nav button:hover {
+  background-color: #004494;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  /* Add align-items to stretch cards in a row */
+  align-items: stretch; /* Ensure all cards in the same row have equal height */
+}
+.card button{
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100px;
+  background-color: red;
+}
+.card img {
+  width: 100%; /* Make image fill the width of the card */
+  height: 150px; /* Set a fixed height for the images */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  border-radius: 5px 5px 0 0; /* Round top corners */
+}
+
+.card-content {
+  padding: 10px; /* Space for any additional content */
+  flex-grow: 1; /* Allow content area to grow */
+}
+
+.card:hover {
+  cursor: pointer; /* Change cursor on hover for better UX */
+}
+
+
+#detailimg img{
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+
+}
+#detailimg{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  margin: auto;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  padding: 0; /* Reset padding for file input */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+ .loader {
+    animation: rotate 2s infinite;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: blue;
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff3d00;
+    box-shadow: 30px 0 0 blue;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #ff3d00;
+    }
+    50% {
+      box-shadow: 0 0 0 #ff3d00;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #ff3d00;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 blue;
+    }
+    50% {
+      box-shadow: 0 0 0 blue;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 blue;
+      margin-top: 0;
+    }
+  }
+  
+  
+#whatsappContact{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background-color: green;
+}
