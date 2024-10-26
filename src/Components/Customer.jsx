@@ -42,18 +42,26 @@ function Customer() {
         navigate(`/details`, { state: { data } });
     };
 
-    const phoneNumber = '+923156565918';
-    const message = 'Check out our latest images!';
+    const phoneNumber = '+923351288999';
+    const message = '';
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     let admin = localStorage.getItem('isAdmin')
-
+    function login() {
+        if (admin) {
+            localStorage.removeItem('isAdmin')
+            location.reload()
+        }
+        else {
+            navigate(`/login`)
+        }
+    }
     return (
         <div className="App">
             <nav>
                 <h1>Lovely Steps</h1>
-                {admin && <button onClick={() => { navigate(`/home`) }}>Home Page </button>}
-                 <button onClick={()=>{navigate(`/login`)}}>Login</button>
+                {admin && <button onClick={() => { navigate(`/home`) }}>Home</button>}
+                <button onClick={login}>{admin ? 'Logout' : 'Login'}</button>
 
 
             </nav>

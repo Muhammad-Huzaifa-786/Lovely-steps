@@ -130,7 +130,7 @@ function Home() {
     }
   };
 
-  const phoneNumber = '+923156565918';
+  const phoneNumber = '+923351288999';
   const message = '';
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   let admin = localStorage.getItem('isAdmin')
@@ -140,7 +140,7 @@ function Home() {
       <nav>
         <h1>Lovely Steps</h1>
         {admin && <button style={{ width: '40px' }} onClick={() => { navigate(`/customer`) }}><FontAwesomeIcon icon={faPaperPlane} /></button>}
-        <button onClick={() => setModalOpen(true)}>Add Image</button>
+        <button onClick={() => setModalOpen(true)}>Add</button>
         {loading && <div>Loading...</div>}
       </nav>
       <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
