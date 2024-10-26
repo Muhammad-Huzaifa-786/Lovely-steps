@@ -59,10 +59,10 @@ let navigate = useNavigate()
                 </div>
             )}
             <br />
-            <button style={{ width: '100px' }} onClick={handleShareImage}>
+            <button style={{ width: '80px' }} onClick={handleShareImage}>
                 Share Image <FontAwesomeIcon icon={faShare} />
             </button>
-            <button style={{ width: '100px', marginLeft: '10px' }} onClick={handleSendUrlToWhatsApp}>
+            <button style={{ width: '80px', marginLeft: '10px' }} onClick={handleSendUrlToWhatsApp}>
                 Send URL <FontAwesomeIcon icon={faLink} />
             </button>
         </div>
